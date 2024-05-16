@@ -30,3 +30,9 @@ The graph is good connected, which means there is a path between every pair of n
   - A C E G D B F
   - Explores all neighbors at the present depth before moving to the next depth level. 
   - Characteristic: Visits nodes level by level, ensuring the shortest path in terms of edges.
+
+# Results of Task 3 #
+* dijkstra algorithm:
+  - {'A': 0, 'B': 8, 'C': 5, 'D': 12, 'E': 10, 'F': 20, 'G': 7}
+
+Dijkstra's algorithm is finding the shortest path in the developed graph.

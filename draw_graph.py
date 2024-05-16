@@ -36,6 +36,7 @@ def dfs_iterative(graph, start_vertex):
 
     while stack:
         vertex = stack.pop()  
+
         if vertex not in visited:
             print(vertex, end=' ')
             visited.add(vertex)
@@ -49,8 +50,10 @@ def bfs_iterative(graph, start):
     visited = set()
     queue = deque([start])
     print('bfs algorithm:') 
+
     while queue:  
         vertex = queue.popleft()
+
         if vertex not in visited:
             print(vertex, end=" ")
             visited.add(vertex)
@@ -59,3 +62,38 @@ def bfs_iterative(graph, start):
     return visited  
 
 bfs_iterative(graph, 'A')
+
+#Task 3#
+
+def dijkstra(graph, start):
+    distances = {vertex: float('infinity') for vertex in graph}
+    distances[start] = 0
+    unvisited = list(graph.keys())
+
+    while unvisited:
+        current_vertex = min(unvisited, key=lambda vertex: distances[vertex])
+
+        if distances[current_vertex] == float('infinity'):
+            break
+
+        for neighbor, weight in graph[current_vertex].items():
+            distance = distances[current_vertex] + weight
+
+            if distance < distances[neighbor]:
+                distances[neighbor] = distance
+
+        unvisited.remove(current_vertex)
+
+    return distances
+
+graphOfDijkstra = {
+    'A': {'C': 5, 'E': 10},
+    'B': {'D': 6, 'C':7},
+    'C': {'A': 3, 'E': 5, 'D': 7, 'G': 2, 'B': 3},
+    'D': {'B': 1, 'C': 4, 'F':8},
+    'E': {'A': 6, 'C':3},
+    'F': {'D': 9},
+    'G': {'C': 1},
+}
+
+print(dijkstra(graphOfDijkstra, 'A'))
