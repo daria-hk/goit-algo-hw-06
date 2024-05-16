@@ -24,5 +24,9 @@ The graph is good connected, which means there is a path between every pair of n
 **Results of Task 2**
 * dfs algorithm:
   - A C E D B F G 
+  - Explores as far as possible along each branch before backtracking.
+  - Characteristic: Goes deep into the graph first.
 * bfs algorithm:
-  - A C E G D B F 
+  - A C E G D B F
+  - Explores all neighbors at the present depth before moving to the next depth level. 
+  - Characteristic: Visits nodes level by level, ensuring the shortest path in terms of edges.
