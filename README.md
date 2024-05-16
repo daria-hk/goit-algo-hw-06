@@ -1,5 +1,5 @@
 ### Conclusions to  draw_graph.py
-**Results of Task 1:**
+# Results of Task 1: #
 In the given example we have: 
 
     - nodes= (["A", "B", "C", "D", "E", "F", "G"]) and
@@ -21,7 +21,7 @@ In the given example we have:
 
 The graph is good connected, which means there is a path between every pair of nodes. There are no isolated components or nodes.
 
-**Results of Task 2**
+# Results of Task 2 #
 * dfs algorithm:
   - A C E D B F G 
   - Explores as far as possible along each branch before backtracking.
