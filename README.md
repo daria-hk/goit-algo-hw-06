@@ -1,8 +1,11 @@
 ### Conclusions to  draw_graph.py
 **Results of Task 1:**
 In the given example we have: 
+
     - nodes= (["A", "B", "C", "D", "E", "F", "G"]) and
+    
     - edges = ("A", "C"), ("A", "C"), ("B", "D"), ("E", "A"), ("C", "E"), ("D", "C"), ("D", "F"), ("C", "G"), ("B", "C")
+    
 *  A: ['C', 'E'],
 *  B: ['D', 'C'],
 *  C: ['A', 'E', 'D', 'G', 'B'],
